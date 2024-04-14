@@ -17,12 +17,10 @@ export default function BlogPosts({ blogs }: { blogs: Blog[] }) {
                     key={blog.id}
                 >
                     <Link href={`/blogs/${blog.id}`}>
-                        <Image
+                        <img
                             alt={blog.title}
                             src={`/api/image/${blog.image_id}`}
                             className=" rounded-md w-[30vw] aspect-video object-cover border-neutral-500 shadow-sm border-2"
-                            width={200}
-                            height={200}
                         />
                         <div className=" p-1">
                             <div className=" flex justify-between">
