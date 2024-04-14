@@ -10,8 +10,6 @@ import BlogPosts from "./blogPosts";
 type BlogsResponse = {
     blogs: Blog[]
 }
-// Revalidate daily and no more
-export const revalidate = 60 * 60 * 24;
 
 export default async function Index() {
     const blogsResponse = await sFetch("/api/blogs", "GET") as BlogsResponse
