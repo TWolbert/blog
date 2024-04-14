@@ -73,7 +73,8 @@ export async function show(request: NextRequest | null = null): Promise<NextResp
 
     return new NextResponse(file.data, {
         headers: {
-            "Content-Type": "image/png"
+            "Content-Type": "image/png",
+            "Cache-Control": "public, max-age=31536000, immutable"
         }
     });
 }
